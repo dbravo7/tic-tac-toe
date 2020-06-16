@@ -7,8 +7,8 @@ import './index.css';
 class Square extends React.Component {
     render() {
         return (
-            <button className="squre">
-                {/*TODO*/}
+            <button className="square">
+                {this.props.value}
             </button>
         );
     }
@@ -16,11 +16,11 @@ class Square extends React.Component {
 
 class Board extends React.Component {
     renderSquare(i) {
-        return <Square />;
+        return <Square value={i} />;
     }
 
     render() {
-        const status = 'Next player: X':
+        const status = 'Next player: X';
 
         return (
             <div>
